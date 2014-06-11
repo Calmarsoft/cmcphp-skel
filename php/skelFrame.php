@@ -14,6 +14,7 @@ class skelFrame extends dynframe {
         'div_hello' => array(label::factory, 'helloworld'),
         'div_hellostat' => array(label::factory, 'hellostat'),        
         'div_hellodyn' => array(label::factory, 'hellodyn'),
+        'div_helloclick' => array(label::factory, 'helloclick'),
         'bt_test' => array(button::factory, 'testbutton'),
     );
 
@@ -41,7 +42,7 @@ class skelFrame extends dynframe {
     }
     /******* EVENTS ******/
     public function click() {
-        $this->w('div_hellostat')->setHtml('Click on server '. $this->count.'; </b>date is: ' . date(DATE_RFC2822));
+        $this->w('div_helloclick')->setHtml('Click on server '. $this->count.'; </b>date is: ' . date(DATE_RFC2822));
         $this->count++;
     }
 

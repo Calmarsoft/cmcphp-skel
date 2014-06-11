@@ -75,6 +75,16 @@ class config extends dftconfig {
     const CACHE_path = 'cache/';    // application cache location
     const APP_guid = 'c614b303e2a468dce9122e2a864700d6';    // application guid (important if different application share the same cache directory)
     
+    static function PoweredBy_Banner($path) {
+        $servinfo = '<br>PHP '.phpversion() . '<br>' .php_uname();
+        return <<<EOT
+        <style>.cmc-poweredby{float:right;margin-right:20px;margin-top:20px;font-size:small;text-align:right}</style>        
+            <div class="cmc-poweredby">Powered by CMC (c) <a href="http://cmc.calmarsoft.com/">CMC Components</a> $servinfo</div>
+EOT
+        ;
+    }
+        
+    
     static function TIME_Banner($path) { global $config; if ($config=='prod') return false; else return true;}
 }
 
