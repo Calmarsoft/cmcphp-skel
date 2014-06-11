@@ -8,7 +8,7 @@ The skeleton includes the compressed version of the CMC for PHP framework and th
 
 This project is designed to work by just copying it into a PHP/Apache environment.
 See live skeleton result:
-http://cmc.calmarsoft.com/runtime/cmc-skel
+http://cmc.calmarsoft.com/cmcphp/test/skeleton/
 
 It also shows a classic layout for a project using the framework.
 
