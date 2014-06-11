@@ -1,0 +1,27 @@
+# voir .ovhconfig
+SetEnv PHP_VER 5_4
+
+Options -Indexes
+Options +FollowSymLinks -Multiviews
+
+
+Allow from all
+
+
+SetEnvIf Remote_Host "^.*$" INDEX=index.php
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !(index.php/*|phpinfo.php|images/*|img/*|style/*|mp4|webm|css|js|ico|txt)
+    RewriteRule ^(.*) index.php [L]
+</IfModule>
+
+
+<FilesMatch "\.(html|css|js|jpe?g|gif|png|ico)$">
+	Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+
+
