@@ -16,7 +16,7 @@ It also shows a classic layout for a project using the framework.
 Documentation
 -------------
 
-This skeleton DOES NOT relect all possible features of the CMC For PHP framework. We have to dig a little in the documentation for that.
+This skeleton DOES NOT reflect all possible features of the CMC For PHP framework. We have to dig a little in the documentation for that.
 More consistent project sample will come up ASAP!
 
 User's manual location:
