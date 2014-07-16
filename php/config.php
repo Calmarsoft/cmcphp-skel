@@ -23,8 +23,6 @@ switch ($config) {
         // our production error display settings: none
         ini_set('display_errors', '0');
         error_reporting(-1);
-        // session files in our cache directory
-        ini_set('session.save_path', request::rootphyspath() . '/cache/');
         break;
     default:
         // in test: use a local development MySQL server
@@ -37,8 +35,6 @@ switch ($config) {
         // direct error dislpay
         ini_set('display_errors', '1');
         error_reporting(-1);
-        // session files in our cache directory
-        ini_set('session.save_path', request::rootphyspath() . '/cache');
 }
 
 // Some PHP global settings
@@ -87,6 +83,9 @@ EOT
     
     static function TIME_Banner($path) { global $config; if ($config=='prod') return false; else return true;}
 }
+
+// session files in our cache directory
+ini_set('session.save_path', request::rootphyspath() . '/'. config::CACHE_path);
 
 config::setConfig('db', $config_db);
 unset($config_db);
